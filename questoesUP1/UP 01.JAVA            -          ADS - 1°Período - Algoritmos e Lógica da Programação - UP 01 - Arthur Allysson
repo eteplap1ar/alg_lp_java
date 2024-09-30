@@ -1,0 +1,93 @@
+//Faça um Programa que peça o raio de um círculo, calcule e mostre sua área. Adicione sua resposta aqui o link do seu GitHub: 
+
+import java.util.Scanner;
+
+public class Main {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        double raio, area;
+        final double PI = 3.14;
+
+        System.out.print("Digite o raio do círculo: ");
+        raio = scanner.nextDouble();
+
+        area = PI * Math.pow(raio, 2);
+
+        System.out.println("A área do círculo é: " + area);
+
+        scanner.close();
+    }
+}
+
+
+
+
+
+//Estrutura de Condição e Repetição nos ajuda a obter algumas vantagens. Elaborar um programa que 
+//efetue a leitura de valores positivos inteiros até que um valor negativo seja informado. Ao final,
+//devem ser apresentados o maior e menor valores informados pelo usuário. Adicione sua resposta aqui o link do seu GitHub:
+
+import java.util.Scanner;
+
+public class Main {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        int numero, maior = Integer.MIN_VALUE, menor = Integer.MAX_VALUE;
+
+        System.out.println("Digite números inteiros positivos (digite um número negativo para parar):");
+
+        do {
+            numero = scanner.nextInt();
+
+            if (numero > 0) {
+                if (numero > maior) {
+                    maior = numero;
+                }
+                if (numero < menor) {
+                    menor = numero;
+                }
+            }
+        } while (numero >= 0);
+
+        if (maior != Integer.MIN_VALUE && menor != Integer.MAX_VALUE) {
+            System.out.println("O maior valor informado foi: " + maior);
+            System.out.println("O menor valor informado foi: " + menor);
+        } else {
+            System.out.println("Nenhum número positivo foi informado.");
+        }
+
+        scanner.close();
+    }
+}
+
+
+
+
+
+//Faça um Programa que peça um valor e mostre na tela se o valor é positivo ou negativo.
+// Adicione sua resposta aqui o link do seu GitHub:
+
+import java.util.Scanner;
+
+public class Main {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+
+        System.out.print("Digite um número: ");
+        int numero = scanner.nextInt();
+
+        if (numero > 0) {
+            System.out.println("O número " + numero + " é positivo.");
+        } else if (numero < 0) {
+            System.out.println("O número " + numero + " é negativo.");
+        } else {
+            System.out.println("O número é zero.");
+        }
+
+        scanner.close();
+    }
+}
+
+
+
+//ATENÇÃO, o Inteli J não estava abrindo e meu replit estava pedindo para assinar um plano premium então tive que compilar os códigos no site OnlineGDB (Nunca havia mexido) e como não sabia como criar um projeto separado, utilizei os Domínios"Main" e "main"
